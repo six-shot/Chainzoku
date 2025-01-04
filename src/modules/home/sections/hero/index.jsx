@@ -12,7 +12,10 @@ export default function MultiLayerParallax() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
 
   return (
-    <div>
+    <div
+      className="bg-green-500 bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
       <img src={bg2} className="sticky top-0" />
     </div>
   );
