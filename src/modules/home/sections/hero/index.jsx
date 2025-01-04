@@ -16,7 +16,7 @@ export default function MultiLayerParallax() {
       className="bg-green-500 bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <img src={bg2} className="sticky top-0" />
+      <img src={bg2} className="sticky top-0 pt-[150px]" />
     </div>
   );
 }
