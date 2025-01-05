@@ -88,7 +88,7 @@ export default function MultiLayerParallax() {
       ></motion.div>
 
       {/* Navbar */}
-      <div className="relative z-10">
+      <div className="relative z-[1000]">
         <Navbar />
       </div>
 
