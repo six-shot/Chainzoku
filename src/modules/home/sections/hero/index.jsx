@@ -34,31 +34,6 @@ export default function MultiLayerParallax() {
 
   return (
     <div ref={ref} className="relative h-[230vh] overflow-hidden">
-      <div className=" absolute top-[-11%] z-[10]   w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
-        <Marquee className="flex items-center" direction="left" speed={15}>
-          <img src={first} alt="first" />
-          <img src={second} alt="first" />
-        </Marquee>
-      </div>
-
-      <div className=" absolute top-[0] z-[10] w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
-        <Marquee className="flex items-center" direction="left" speed={11.54}>
-          <img src={second} alt="third" />
-          <img src={secondtwo} alt="third" />
-        </Marquee>
-      </div>
-      <div className=" absolute top-[15%] z-[10] w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
-        <Marquee className="flex items-center" direction="left" speed={15}>
-          <img src={third} alt="third" />
-          <img src={first} alt="third" />
-        </Marquee>
-      </div>
-      <div className=" absolute top-[27%] z-[10]  w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
-        <Marquee className="flex items-center" direction="left" speed={12.5}>
-          <img src={first} alt="third" />
-          <img src={second} alt="third" />
-        </Marquee>
-      </div>
       {/* Background Layer */}
       <motion.div
         className="absolute inset-0 bg-center bg-cover "
@@ -74,16 +49,13 @@ export default function MultiLayerParallax() {
       </div>
 
       {/* Foreground Layer */}
-      <div className="bg-red-500 relative">
+      <div className="">
         <motion.img
           src={bg2}
           className="absolute top-0 left-0 w-full pt-[150px] z-[30] "
           style={{ y: foregroundY }}
         />
-        <div className="absolute top-0 z-[]">
-          
-
-        </div>
+        <div className="absolute top-0 z-[]"></div>
       </div>
 
       {/* Content */}
@@ -95,13 +67,37 @@ export default function MultiLayerParallax() {
 
        */}
         <div className=" relative flex items-center justify-center h-[480px]">
-          <img className="w-[1280px]" src={chainzoku} />
+          <img className="w-[1280px] relative z-[10]" src={chainzoku} />
           <h1 className="absolute -bottom-10 agbuch_bold text-[.875rem] leading-[.875rem] uppercase tracking-[-.02em] text-center ">
             Mint your Zoku. Take a side.
           </h1>
         </div>
+        <div className=" absolute bottom-[11%]   w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
+          <Marquee className="flex items-center" direction="left" speed={15}>
+            <img src={first} alt="first" />
+            <img src={second} alt="first" />
+          </Marquee>
+        </div>
+        {/* <div className=" absolute bottom-[0] z-[10] w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
+          <Marquee className="flex items-center" direction="left" speed={11.54}>
+            <img src={second} alt="third" />
+            <img src={secondtwo} alt="third" />
+          </Marquee>
+        </div> */}
+        {/* <div className=" absolute -bottom-[15%] z-[10] w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
+          <Marquee className="flex items-center" direction="left" speed={15}>
+            <img src={third} alt="third" />
+            <img src={first} alt="third" />
+          </Marquee>
+        </div>
+        <div className=" absolute -bottom-[27%] z-[10]  w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
+          <Marquee className="flex items-center" direction="left" speed={12.5}>
+            <img src={first} alt="third" />
+            <img src={second} alt="third" />
+          </Marquee>
+        </div> */}
       </motion.div>
-      <div className="fixed left-[2.8125rem] top-1/2 -translate-y-1/2">
+      <div className="fixed z-[200] left-[2.8125rem] top-1/2 -translate-y-1/2">
         <ul className="ulll relative flex flex-col gap-[2.5rem] pl-[1.625rem] agbuch_bold  text-[#fffff7] text-[.6rem] leading-[0.875rem]">
           <li>
             <button className="relative btnnn  uppercase cursor-pointer">
