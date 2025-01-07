@@ -1,7 +1,3 @@
-
-
-
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import bg from "../../../../assets/background.jpg";
@@ -11,9 +7,11 @@ import chainzoku from "../../../../assets/icons/chainzoku.svg";
 import first from "../../../../assets/8b3d39.webp";
 import second from "../../../../assets/b1771e.webp";
 import secondtwo from "../../../../assets/292f93.webp";
-import third from "../../../../assets/292f93.webp"
+import third from "../../../../assets/292f93.webp";
 import Marquee from "react-fast-marquee";
-
+import star from "../../../../assets/icons/star.svg";
+import playvideo from "../../../../assets/3332994918.mp4";
+import playtext from "../../../../assets/icons/play.svg";
 export default function MultiLayerParallax() {
   const ref = useRef(null);
 
@@ -63,9 +61,6 @@ export default function MultiLayerParallax() {
         className="relative z-20 flex  flex-col items-center h-screen justify-center text-white"
         style={{ y: contentY }} // Add parallax effect to content
       >
-        {/* 
-
-       */}
         <div className=" relative flex items-center justify-center h-[480px]">
           <img className="w-[1280px] relative z-[10]" src={chainzoku} />
           <h1 className="absolute -bottom-10 agbuch_bold text-[.875rem] leading-[.875rem] uppercase tracking-[-.02em] text-center ">
@@ -97,6 +92,27 @@ export default function MultiLayerParallax() {
           </Marquee>
         </div> */}
       </motion.div>
+      <div className="fixed z-[200]  bottom-0 w-full flex justify-between items-end px-[2.8125rem] pb-[2.8125rem]">
+        <img src={star} />
+        <div className="w-[15.12rem] h-[8rem] relative ">
+          <div className="playtext">
+            <img src={playtext} />
+          </div>
+          <div className="relative">
+            <video
+              src={playvideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="clip-right"
+            ></video>
+          </div>
+          <p className="previewtext text-[6.25rem] leading-[-.02em] drukheavy">
+            PLAY
+          </p>
+        </div>
+      </div>
       <div className="fixed z-[200] left-[2.8125rem] top-1/2 -translate-y-1/2">
         <ul className="ulll relative flex flex-col gap-[2.5rem] pl-[1.625rem] agbuch_bold  text-[#fffff7] text-[.6rem] leading-[0.875rem]">
           <li>

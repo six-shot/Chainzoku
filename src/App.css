@@ -6,3 +6,12 @@
 .agbuch_bold{
   font-family: AGBuchExtendedBQ;
 }
+@font-face {
+  font-family: Druk-Heavy-Trial;
+  src: url(../public/fonts/Druk-Heavy-Trial.otf);
+  font-display: block;
+}
+.drukheavy{
+  font-family: Druk-Heavy-Trial;
+}
+
