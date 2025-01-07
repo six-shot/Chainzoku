@@ -8,6 +8,11 @@ import bg from "../../../../assets/background.jpg";
 import bg2 from "../../../../assets/blob_https___chainzoku.io_3de7a21b-5599-4eb7-80e2-6d1c8fcc6c22";
 import Navbar from "../../../../components/global/navbar";
 import chainzoku from "../../../../assets/icons/chainzoku.svg";
+import first from "../../../../assets/8b3d39.webp";
+import second from "../../../../assets/b1771e.webp";
+import secondtwo from "../../../../assets/292f93.webp";
+import third from "../../../../assets/292f93.webp"
+import Marquee from "react-fast-marquee";
 
 export default function MultiLayerParallax() {
   const ref = useRef(null);
@@ -29,9 +34,34 @@ export default function MultiLayerParallax() {
 
   return (
     <div ref={ref} className="relative h-[230vh] overflow-hidden">
+      <div className=" absolute top-[-11%] z-[10]   w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
+        <Marquee className="flex items-center" direction="left" speed={15}>
+          <img src={first} alt="first" />
+          <img src={second} alt="first" />
+        </Marquee>
+      </div>
+
+      <div className=" absolute top-[0] z-[10] w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
+        <Marquee className="flex items-center" direction="left" speed={11.54}>
+          <img src={second} alt="third" />
+          <img src={secondtwo} alt="third" />
+        </Marquee>
+      </div>
+      <div className=" absolute top-[15%] z-[10] w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
+        <Marquee className="flex items-center" direction="left" speed={15}>
+          <img src={third} alt="third" />
+          <img src={first} alt="third" />
+        </Marquee>
+      </div>
+      <div className=" absolute top-[27%] z-[10]  w-[150vw] transform -translate-x-[20vw] rotate-[20.94deg]">
+        <Marquee className="flex items-center" direction="left" speed={12.5}>
+          <img src={first} alt="third" />
+          <img src={second} alt="third" />
+        </Marquee>
+      </div>
       {/* Background Layer */}
       <motion.div
-        className="absolute inset-0 bg-center bg-cover"
+        className="absolute inset-0 bg-center bg-cover "
         style={{
           backgroundImage: `url(${bg})`,
           y: backgroundY,
@@ -44,17 +74,26 @@ export default function MultiLayerParallax() {
       </div>
 
       {/* Foreground Layer */}
-      <motion.img
-        src={bg2}
-        className="absolute top-0 left-0 w-full pt-[150px] z-[30]"
-        style={{ y: foregroundY }}
-      />
+      <div className="bg-red-500 relative">
+        <motion.img
+          src={bg2}
+          className="absolute top-0 left-0 w-full pt-[150px] z-[30] "
+          style={{ y: foregroundY }}
+        />
+        <div className="absolute top-0 z-[]">
+          
+
+        </div>
+      </div>
 
       {/* Content */}
       <motion.div
         className="relative z-20 flex  flex-col items-center h-screen justify-center text-white"
         style={{ y: contentY }} // Add parallax effect to content
       >
+        {/* 
+
+       */}
         <div className=" relative flex items-center justify-center h-[480px]">
           <img className="w-[1280px]" src={chainzoku} />
           <h1 className="absolute -bottom-10 agbuch_bold text-[.875rem] leading-[.875rem] uppercase tracking-[-.02em] text-center ">
@@ -65,25 +104,39 @@ export default function MultiLayerParallax() {
       <div className="fixed left-[2.8125rem] top-1/2 -translate-y-1/2">
         <ul className="ulll relative flex flex-col gap-[2.5rem] pl-[1.625rem] agbuch_bold  text-[#fffff7] text-[.6rem] leading-[0.875rem]">
           <li>
-            <button className="relative btnnn  uppercase">Zokus</button>
+            <button className="relative btnnn  uppercase cursor-pointer">
+              Zokus
+            </button>
           </li>
           <li>
-            <button className="relative btnnnn uppercase">Clans</button>
+            <button className="relative btnnnn uppercase cursor-pointer">
+              Clans
+            </button>
           </li>
           <li>
-            <button className="relative btnnnn uppercase">Vision</button>
+            <button className="relative btnnnn uppercase cursor-pointer">
+              Vision
+            </button>
           </li>
           <li>
-            <button className="relative btnnnn uppercase">Custom</button>
+            <button className="relative btnnnn uppercase cursor-pointer">
+              Custom
+            </button>
           </li>
           <li>
-            <button className="relative btnnnn uppercase">Roadmap</button>
+            <button className="relative btnnnn uppercase cursor-pointer">
+              Roadmap
+            </button>
           </li>
           <li>
-            <button className="relative btnnnn uppercase">Team</button>
+            <button className="relative btnnnn uppercase cursor-pointer">
+              Team
+            </button>
           </li>
-          <li>
-            <button className="relative btnnn uppercase">FAQ</button>
+          <li className="">
+            <button className="relative btnnn uppercase cursor-pointer">
+              FAQ
+            </button>
           </li>
         </ul>
       </div>
