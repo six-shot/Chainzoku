@@ -1,8 +1,48 @@
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-  background-color: #72A2D2;
+body {
+  background-color: #72a2d2;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+}
+.ulll::before {
+  border-bottom: 1px solid #fffff7;
+  border-bottom-left-radius: 80px;
+  border-left: 1px solid #fffff7;
+  border-top: 1px solid #fffff7;
+  border-top-left-radius: 80px;
+  content: "";
+  display: inline-block;
+  height: calc(100% - 0.875rem);
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+}
+.btnnn::after {
+  background: #fffff7;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 100%;
+}
+.btnnnn::before {
+  background: #fffff7;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  left: -0.3125rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-100%);
+  width: 1.3125rem;
 }

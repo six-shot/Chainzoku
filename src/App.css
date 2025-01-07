@@ -1,0 +1,8 @@
+@font-face {
+  font-family: AGBuchExtendedBQ;
+  src: url(../public/fonts/AGBuchExtendedBQ-Bold.otf);
+  font-display: block;
+}
+.agbuch_bold{
+  font-family: AGBuchExtendedBQ;
+}
