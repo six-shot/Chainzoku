@@ -92,27 +92,35 @@ export default function MultiLayerParallax() {
           </Marquee>
         </div> */}
       </motion.div>
-      <div className="fixed z-[200]  bottom-0 w-full flex justify-between items-end px-[2.8125rem] pb-[2.8125rem]">
+      <div className="fixed z-[200] bottom-0 w-full flex justify-between items-end px-[2.8125rem] pb-[2.8125rem]">
         <img src={star} />
-        <div className="w-[15.12rem] h-[8rem] relative ">
-          <div className="playtext">
-            <img src={playtext} />
-          </div>
-          <div className="relative">
-            <video
-              src={playvideo}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="clip-right"
-            ></video>
+        <div className="w-[15.12rem] h-[8rem] relative group cursor-pointer  ">
+          <img
+            src={playtext}
+            alt="playtext"
+            className="absolute -left-2 top-1/2 transform -translate-y-1/2 group-hover:left-1/2 group-hover:translate-x-[-50%] transition-all duration-300 z-[10000]"
+          />
+
+          <div className="relative clip-right  overflow-hidden">
+            <div className="absolute top-0 left-[-100%] bg-black opacity-0 group-hover:left-0 group-hover:opacity-100 transition-all duration-300 w-full h-full z-[200] clip-right"></div>
+            <div className="relative">
+              <video
+                src={playvideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="clip-right"
+              ></video>
+            </div>
           </div>
           <p className="previewtext text-[6.25rem] leading-[-.02em] drukheavy">
             PLAY
           </p>
         </div>
       </div>
+      <div className="w-[15.12rem] h-[8rem] relative group cursor-pointer clip-right"></div>
+
       <div className="fixed z-[200] left-[2.8125rem] top-1/2 -translate-y-1/2">
         <ul className="ulll relative flex flex-col gap-[2.5rem] pl-[1.625rem] agbuch_bold  text-[#fffff7] text-[.6rem] leading-[0.875rem]">
           <li>
