@@ -1,19 +1,3 @@
-// import logo from "./logo.svg";
-// import "./App.css";
-// import Hero from "./modules/home/sections/hero";
-// import Holder from "./modules/home/sections/hero/holder";
-
-
-// function App() {
-//   return (
-//     <div>
-//       <Hero />
-//      <Holder/>
-//     </div>
-//   );
-// }
-
-
 import React, { useState, useRef } from "react";
 import "./App.css";
 import image1 from "../src/assets/cursor/430233.webp";
@@ -27,6 +11,9 @@ import image8 from "../src/assets/cursor/be4198.webp";
 import image9 from "../src/assets/cursor/f9943b.png";
 import image10 from "../src/assets/cursor/fe55e8.webp";
 import image11 from "../src/assets/cursor/sticker02.png";
+import Hero from "./modules/home/sections/hero";
+import Holder from "./modules/home/sections/hero/holder";
+
 
 function App() {
   const [images, setImages] = useState([]);
@@ -73,6 +60,8 @@ function App() {
 
   return (
     <div className="App" onClick={handleClick}>
+      <Hero />
+      <Holder />
       {images.map((image) => (
         <img
           key={image.id}
@@ -93,4 +82,3 @@ function App() {
 }
 
 export default App;
-
