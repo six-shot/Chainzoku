@@ -15,3 +15,26 @@
   font-family: Druk-Heavy-Trial;
 }
 
+
+
+.App {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer; /* Hide the default cursor */
+}
+
+.image-cursor {
+  position: absolute;
+  pointer-events: none; /* Prevent image from blocking clicks */
+  transform: translate(-50%, -50%);
+  animation: fadeOut 1s ease forwards; /* Fade-out animation */
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}

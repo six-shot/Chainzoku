@@ -121,3 +121,18 @@ body {
     transform: translateX(0);
   }
 }
+
+
+@keyframes spinEntry {
+  0% {
+    transform: rotate(180deg); /* Start from 180° */
+  }
+  100% {
+    transform: rotate(0deg); /* End at 0° */
+  }
+}
+
+.image-cursor {
+  animation: spinEntry 0.5s ease-out forwards; /* Fast spin on entry, remain in the final position */
+}
+
